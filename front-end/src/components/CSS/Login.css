@@ -1,0 +1,49 @@
+.Black-tranparent-box{
+    
+    border-radius: 4px;
+    margin-top: 3%;
+    margin-left: 30%;
+    margin-right:  30%;
+    
+    height: 280px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.login{
+    /* position: relative; */
+    /* top: 7em; */
+    margin-top: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+}
+.input-boxes{
+    padding-top:8%;
+}
+.sign-up-b{
+    padding-top: 7%;
+    color: white;
+}
+.login-b{
+    border-radius: 5px;
+    margin-top: 5%;
+    padding: 3px 30px;
+}
+.sign-in-text{
+    color: #CCCC00;
+    text-align: left;
+    margin-left: 5%;
+    padding-top: 2%;
+}
+
+.wallpaper{
+    background-image: url(../images/wallpaper.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
