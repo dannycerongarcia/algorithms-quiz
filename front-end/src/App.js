@@ -13,6 +13,7 @@ import {connect} from 'react-redux';
 // importing pages
 import Login from "./components/Login";
 import Home from "./components/Home";
+import Reguister from "./components/Reguister";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Login}/>
         <Route path='/home' component={Home}/>
+        <Route path='/reguister' component={Reguister}></Route>
       </Switch>
     </div>
   );

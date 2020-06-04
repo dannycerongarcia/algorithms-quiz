@@ -77,8 +77,8 @@ const Login = ({dispatch, email,isLoggedIn}) => {
                                 onClick = {verify}>
                                     Login
                                 </button>
-                                <div className="sign-up-b ">
-                                    Sign-up
+                                <div  >
+                                <a href="/reguister">Sign-Up</a>
                                 </div>
                             </div>
                         </div>
