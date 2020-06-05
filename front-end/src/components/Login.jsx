@@ -20,9 +20,18 @@ const Login = ({dispatch, email,isLoggedIn}) => {
     // let[isLoggedIn,setIsLogged] = useState(false)
 
     const verify = () => {
+        if(email===''&&myPassword===''){
+            alert('Please enter your username and password');
+        }
+        const body = {
+            username: email,
+            password: myPassword,
+        };
+        
         if(email === 'dannyceron'){
             dispatch(setIsLoggedIn(true));
         }
+        
         
     };
     const updateEmail = (newEmail) => {
@@ -35,6 +44,7 @@ const Login = ({dispatch, email,isLoggedIn}) => {
         console.log("login test is set to true");
         return <Redirect to='/home'/>;
     }
+    
    
 
     return (

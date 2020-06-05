@@ -2,8 +2,9 @@
     margin-top: 5%;
     border-radius: 0px 5px 5px 0px;
     background-color:white;
-    height: 360px;
+    height: 365px;
     /* border: solid 0px; */
+    margin-left: -5.5%;
 
 }
 .reguister-background{
@@ -24,21 +25,21 @@
     text-align: left;
 }
 .side-image{
-    margin-top: 2%;
+    margin-top: 8%;
     background-image: url(../images/side-reguister-image.jpg);
-    height: 360px;
-    width: 22%;
+    height: 359px;
+    width: 100%;
     background-size: cover;
-    position: fixed;
+    position: relative;
     background-repeat: no-repeat;
-    background-position: center;
-    
+    background-position: right;
+    margin-left: 10%;
     border-radius: 5px 0px 0px 5px;
 }
 .laMargin{padding-left: 3%;
     padding-right: 7%;}
 
 .reguiter-button{
-    padding-top: 1%;
-    margin-right: 75%;
+    padding-top: 1.7%;
+    margin-right: 70%;
 }

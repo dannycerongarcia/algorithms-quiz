@@ -2,14 +2,43 @@ import React, {useState} from 'react';
 import {Redirect} from 'react-router-dom';
 import{connect} from 'react-redux';
 import './CSS/reguister.css'
+import { setEmail } from '../redux/actions/userActions';
+
+
 
 const Reguister =()=>{
+
+    let [myEmail,setMyEmail] = useState('');
+    let [myUser,setMyUser] = useState('');
+    let [myPassword,setMyPassword] = useState('');
+    let [reguisterCheck, setReguisterCheck] = useState(false);
+
+    const submitData = ()=>{
+        if(myPassword!==''&&myEmail!==''&&myUser!==''){
+            const body = {
+                username: myUser,
+                email:myEmail,
+                password: myPassword,
+            };
+            
+            setReguisterCheck(reguisterCheck= true);
+        }
+        else{
+            alert('Please fill out all form');
+        }
+        
+    }
+
+    if(reguisterCheck){
+        return <Redirect to='/'/>;
+    }
+
     return(
     <div className="reguister-background">
         <div className="container">
             <div className="row">
 
-                <div className="col-3"><div className="side-image"></div></div>
+                <div className="col-4"><div className="side-image"></div></div>
                 <div className="col-6">
                     
                     <div className="reguister-box">
@@ -17,11 +46,12 @@ const Reguister =()=>{
                         <p className="reguister-text">Email:</p>
                         <div className="laMargin">
                         <input
+                        
                         class="form-control"
                         type="text"
                         placeholder="example@gmail.com"
                         
-                        // onChange={e => urEmail(e.target.value)}
+                        onChange={e => setMyEmail(myEmail=e.target.value)}
                         />
                         </div>
                        
@@ -31,8 +61,9 @@ const Reguister =()=>{
                         class="form-control"
                         type="text"
                         placeholder="IamGroot"
+                        value={myUser}
                         
-                        // onChange={e => urEmail(e.target.value)}
+                        onChange={e => setMyUser(myUser= e.target.value)}
                         />
                         </div>
                         
@@ -42,12 +73,13 @@ const Reguister =()=>{
                         
                         type="password"
                         class="form-control"
-                        placeholder="example@gmail.com"
+                        placeholder="abc1234"
                         
-                        // onChange={e => urEmail(e.target.value)}
+                        onChange={e => setMyPassword(myPassword=e.target.value)}
                         />
                         </div>
-                        <div className="reguiter-button"><button>Reguister</button></div>
+                        <div className="reguiter-button"><button
+                        onClick={submitData}>Reguister</button></div>
                     </div>
                 </div>
                 <div className="col-2"></div>
