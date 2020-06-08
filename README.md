@@ -23,7 +23,7 @@ npx:    npm install -g<br />
 # Functionalities.
 1) users can create an account.
 2) Users can view their scores.
-3) ...
+3) ...<br />
 .<br />
 .<br />
 .<br />
