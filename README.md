@@ -7,7 +7,7 @@ This website desdign to test your algorithms knowledge.
    -Software Stack<br />
       OS:          Linux<br />
       WebServer:   AWS/node<br />
-      Database:    SQL<br />
+      Database:    mySQL<br />
       Server-side: JavaScript<br />
       Framework:   React/nodeJS.<br />
                    This website uses Functional components intead of of class componenents or Pure components with the purpose of reducing the series of checks related to its lifecycle. If we do not need to use state or lifecycle methods, we can avoid these checks by writing a functional component.

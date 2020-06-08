@@ -3,6 +3,7 @@ import {Redirect} from 'react-router-dom';
 import{connect} from 'react-redux';
 import './CSS/reguister.css'
 import { setEmail } from '../redux/actions/userActions';
+import axios from 'axios';
 
 
 
@@ -20,8 +21,14 @@ const Reguister =()=>{
                 email:myEmail,
                 password: myPassword,
             };
+            axios.post('/reguisterUser',body)
+            .then((res)=>{
+                if(res) setReguisterCheck(reguisterCheck= true);
+                else{
+                    alert("There is a user with the same cresentials");
+                }
+            })
             
-            setReguisterCheck(reguisterCheck= true);
         }
         else{
             alert('Please fill out all form');
