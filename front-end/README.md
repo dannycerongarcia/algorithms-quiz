@@ -1,12 +1,18 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Install before running 
-   # Routs:      npm install --save react-router-dom
-   # Bootstrap:  npm install bootstrap --save(does not work )
+# Frontend:
+   ### Routs:      npm install --save react-router-dom
+   ### Bootstrap:  npm install bootstrap --save(does not work )
          added bootstrap via CDN 
          reference: https://www.positronx.io/react-bootstrap-tutorial-getting-started-reactstrap-with-react/
-   # Redux: npm install --save redux
-   #        npm install react-redux
-   #        npm install --save redux-thunk
+   ### Redux: npm install --save redux
+   ###        npm install react-redux
+   ###        npm install --save redux-thunk
+   ### axios: npm install axios --save
+   
+# Back-end:
+  ### npm i express
+  ### npm i mysql
 
 ## Available Scripts
 

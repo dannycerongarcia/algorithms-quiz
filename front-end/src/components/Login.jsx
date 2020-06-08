@@ -2,38 +2,47 @@ import React, { useState } from 'react';
 import './CSS/Login.css'
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-
-
+// importing redux variables and function
 import {setEmail,setIsLoggedIn} from '../redux/actions/userActions';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
+
 const Login = ({dispatch, email,isLoggedIn}) => {
-    //states hook for testing purpose
-    // let [myEmail, setEmail] = useState('')
-    // const updateEmailTest = (email) => {
-    //     setEmail(myEmail = email);
-    // };
+
     let [myPassword, setPassword] = useState('');
     const updatePassword = (password) => {
         setPassword(myPassword = password);
     };
 
+    const options = {
+        withCredentials: true
+    };
     // let[isLoggedIn,setIsLogged] = useState(false)
 
     const verify = () => {
-        if(email===''&&myPassword===''){
-            alert('Please enter your username and password');
-        }
         const body = {
             username: email,
             password: myPassword,
         };
-        
-        if(email === 'dannyceron'){
-            dispatch(setIsLoggedIn(true));
+        if(email===''&&myPassword===''){
+            alert('Please enter your username and password');
+        }
+        else{
+            console.log(body);
+            axios.post('/loginUser',body,options)
+            .then((res)=>{
+                if(res.data){
+                    dispatch(setIsLoggedIn(true));
+                }
+                else{
+                    alert('incorrect credential \n\ntry again \n     or \nsign up');
+                }
+            }).catch(console.log)
         }
         
         
+        
     };
+
     const updateEmail = (newEmail) => {
         if (newEmail.length < 20) {
             dispatch(setEmail(newEmail))
