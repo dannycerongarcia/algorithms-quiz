@@ -19,6 +19,7 @@ nodejs: sudo apt-get install curl<br />
                                    (more information details on nodejs version visit: https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/)<br />
 npm:    npm install npm@latest -g<br />
 npx:    npm install -g<br />
+mp2:    npm install pm2@latest -g<br />
 
 # Functionalities.
 1) users can create an account.
