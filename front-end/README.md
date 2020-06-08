@@ -13,6 +13,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # Back-end:
   ### npm i express
   ### npm i mysql
+  ### npm install md5
+  ### npm i cookie-parser
 
 ## Available Scripts
 
