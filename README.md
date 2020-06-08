@@ -16,14 +16,14 @@ Must Installing<br />
 nodejs: sudo apt-get install curl<br />
         curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -<br />
         sudo apt-get install nodejs<br />
-                                   (more information details on nodejs version visit: https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/)    
-npm:    npm install npm@latest -g
-npx:    npm install -g
+                                   (more information details on nodejs version visit: https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/)<br />
+npm:    npm install npm@latest -g<br />
+npx:    npm install -g<br />
 
 # Functionalities.
 1) users can create an account.
 2) Users can view their scores.
 3) ...
-.
-.
-.
+.<br />
+.<br />
+.<br />
