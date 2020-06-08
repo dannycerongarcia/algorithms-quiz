@@ -27,7 +27,7 @@ const Reguister =()=>{
                 else{
                     alert("There is a user with the same cresentials");
                 }
-            })
+            }).catch(console.log)
             
         }
         else{

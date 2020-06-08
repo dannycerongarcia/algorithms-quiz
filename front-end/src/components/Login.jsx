@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 // importing redux variables and function
 import {setEmail,setIsLoggedIn} from '../redux/actions/userActions';
 import axios from 'axios';
+import md5 from 'md5';
 
 const Login = ({dispatch, email,isLoggedIn}) => {
 
@@ -19,6 +20,8 @@ const Login = ({dispatch, email,isLoggedIn}) => {
     // let[isLoggedIn,setIsLogged] = useState(false)
 
     const verify = () => {
+        document.cookie = `username=${email}`;//set cookies with key/value pairs
+        document.cookie = `password=${md5(myPassword)}`; //set cookies with key/value pairs
         const body = {
             username: email,
             password: myPassword,

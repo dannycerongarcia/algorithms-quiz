@@ -5,8 +5,10 @@ const express = require('express');
 const app=express();
 // this json to read objects from the frontend
 app.use(express.json());
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
 const port = process.env.PORT_NUMBER || 3001;
-var check = false;
+var md5 = require('md5');
 // mySQL database
 const db_info = require('./constants');
 const mySQL = require('mysql');
@@ -56,6 +58,28 @@ app.post('/loginUser',(req,res)=>{
             }
         }
         if(result ==='')return res.send(false);
+    });
+});
+
+app.post('/score',(req,res)=>{
+    const username = req.cookies.username;
+    const password = req.cookies.password; 
+    let sql = "SELECT password,score FROM users"+
+                                " WHERE username = '"+username+"'";
+    db.query(sql, (err,result)=>{
+        if(err) console.log(err);
+        if(result !=''){
+            if(password === md5(result[0].password)){
+                let tempscore = parseInt(req.body.score)+parseInt(result[0].score)
+                let sqlTwo = "UPDATE users "+
+                              "SET score = "+tempscore
+                              +" WHERE username =  '"+username+"'";
+                db.query(sqlTwo, (err,result)=>{
+                    if(err) console.log(err);
+                });
+            }
+        }
+        
     });
 });
 

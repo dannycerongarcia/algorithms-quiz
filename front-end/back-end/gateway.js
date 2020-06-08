@@ -31,4 +31,9 @@ app.all("/reguisterUser*",(req,res)=>{
     });
 });
 
+app.all("/score*",(req,res)=>{
+    apiProxy.web(req,res,{
+        target:server1
+    });
+});
 app.listen(port,()=> console.log(`Gateway on port ${port}!`))
