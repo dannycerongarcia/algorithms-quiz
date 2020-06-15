@@ -1,82 +1,36 @@
-import React, { useState } from 'react';
-import  { Redirect } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Redirect, Link } from 'react-router-dom'
 import axios from 'axios';
 import Tree from 'react-tree-graph';
 import 'react-tree-graph/dist/style.css'
+import './CSS/Home.css'
 const cookieParser = require('cookie-parser');
-const Home = () =>{
-    let [myAnswer, setAnswer] = useState('');
-    let data = 
-    {
-        name : 'B',
-        children:
-        [
-            {
-            name: 'F',
-            children:[
-                {
-                name:'K',
-            },
-            {
-                name:'L',
-            },]
-        },
-        {
-            name: 'Z',
-            children:[
-                {
-                name:'H',
-            },
-            {
-                name:'V',
-            },]
-        },
-        {
-            name: 'O',
-            children:[
-                {
-                name:'P',
-            },
-            {
-                name:'W',
-            },]
-        }
-        ]
-    };
-    // might need to set this inside server to avoid cheating
-    const scoreTest = (value)=>{
-        const body = {
-            userinfo:document.cookie,
-            answer:myAnswer,
-            score:1,
-        }
-        console.log(body)
-        axios.post('/score',body)
-        .then((res)=>{
-            if(res.data){
-                alert("you got it right! Yay!")
-            }
-            else{alert("sory try again")}
-        }).catch(console.log)
-    }
-    return(
-        <div>
-            <h1 >Under construction</h1>
-            <h3>Enter the letter for the 7th iteration</h3>
-            <Tree
-            data={data}
-            height={400}
-            width={400}
-            svgProps={{transform: 'rotate(90)'}}
-                />
-            <input
-            type="text"
-            placeholder="Answer"
-            // value={}
-            onChange={e => setAnswer(e.target.value)}
-            />
-            <button 
-            onClick ={scoreTest}>add score</button>
+const Home = () => {
+    
+    return (
+        <div className="background">
+            <title>Algorithms: Home</title>
+            <div className="row">
+            <div className="col-2"> </div>
+            <div className="col-9">
+                <div className="row">
+                    <div className="menu-section-top menu-hove-top"><h4 className="text-align"><Link to="/dfst">DFS: Depth-First Search</Link></h4></div>
+                </div>
+                <div className="row">
+                    <div className="menu-section menu-hove"><h4 className="text-align"><Link to="/bfst">BFS: Breadth-First Search</Link></h4></div>
+                </div>
+                <div className="row">
+                    <div className="menu-section menu-hove"><h4 className="text-align"><Link to="/Btree">Binary Search</Link></h4></div>
+                </div>
+                <div className="row">
+                    <div className="menu-section menu-hove"><h4 className="text-align"><Link to="Msort">Merge Sort</Link></h4></div>
+                </div>
+                <div className="row">
+                    <div className="menu-section menu-hove"><h4 className="text-align"><Link to="Qsort">Quick Sort</Link></h4></div>
+                </div>
+            </div>
+            <div className="col-1"> </div>
+            </div> 
         </div>
     );
 

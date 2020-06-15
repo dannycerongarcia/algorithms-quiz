@@ -36,4 +36,16 @@ app.all("/score*",(req,res)=>{
         target:server1
     });
 });
+
+app.all('/dfsTree*',(req,res)=>{
+    apiProxy.web(req,res,{
+        target:server2
+    });
+});
+
+app.all('/bfsTree*',(req,res)=>{
+    apiProxy.web(req,res,{
+        target:server2
+    });
+});
 app.listen(port,()=> console.log(`Gateway on port ${port}!`))

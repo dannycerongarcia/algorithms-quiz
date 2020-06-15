@@ -15,6 +15,12 @@ import Login from "./components/Login";
 import Home from "./components/Home";
 import Reguister from "./components/Reguister";
 
+import DFStree from './components/DFStree';
+import BFStree from './components/BFStree';
+import Btree from './components/Btree';
+import Msort from './components/Msort';
+import Qsort from './components/Qsort';
+
 
 function App() {
   return (
@@ -27,6 +33,14 @@ function App() {
         <Route path="/" exact component={Login}/>
         <Route path='/home' component={Home}/>
         <Route path='/reguister' component={Reguister}></Route>
+        <Route path="/dfst" component={DFStree}></Route>
+        <Route path="/bfst" component={BFStree}></Route>
+        <Route path="/Btree" component={Btree}></Route>
+        <Route path="/Msort" component={Msort}></Route>
+        <Route path="/Qsort" component={Qsort}></Route>
+
+
+
       </Switch>
     </div>
   );

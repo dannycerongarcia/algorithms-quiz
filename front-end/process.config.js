@@ -14,6 +14,12 @@ module.exports = {
             ignore_watch:["node_modules"],
             watch:true,
         },
-       
+        {
+            name: "server2",
+            script:"./back-end/server2.js",
+            instances:1,
+            exec_watch:["noce_modules"],
+            watch:true,
+        }
     ]
 }

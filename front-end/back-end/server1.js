@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
-const port = process.env.PORT_NUMBER || 3001;
+const port = 3001;
 var md5 = require('md5');
 // mySQL database
 const db_info = require('./constants');
@@ -62,30 +62,31 @@ app.post('/loginUser', (req, res) => {
 });
 
 app.post('/score', (req, res) => {
-    if (req.body.answer === 'H') {
-        console.log("correct answer")
-        const username = req.cookies.username;
-        const password = req.cookies.password;
-        let sql = "SELECT password,score FROM users" +
-            " WHERE username = '" + username + "'";
-        db.query(sql, (err, result) => {
-            if (err) console.log(err);
-            if (result != '') {
-                if (password === md5(result[0].password)) {
-                    let tempscore = parseInt(req.body.score) + parseInt(result[0].score)
-                    let sqlTwo = "UPDATE users " +
-                        "SET score = " + tempscore
-                        + " WHERE username =  '" + username + "'";
-                    db.query(sqlTwo, (err, result) => {
 
-                        if (err) console.log(err);
-                    });
-                    
-                }
+    console.log(req.body)
+    const username = req.body.username;
+    const password = req.body.password;
+    console.log(username)
+    let sql = "SELECT password,score FROM users" +
+        " WHERE username = '" + username + "'";
+    db.query(sql, (err, result) => {
+        if (err) console.log(err);
+        if (result != '') {
+            if (password === md5(result[0].password)) {
+                let tempscore = parseInt(req.body.score) + parseInt(result[0].score)
+                let sqlTwo = "UPDATE users " +
+                    "SET score = " + tempscore
+                    + " WHERE username =  '" + username + "'";
+                db.query(sqlTwo, (err, result) => {
+
+                    if (err) console.log(err);
+                });
+
             }
-        });
-        return res.send(true);
-    }
+        }
+    });
+    return res.send(true);
+
     res.send(false);
 });
 
