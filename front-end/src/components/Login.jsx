@@ -30,7 +30,7 @@ const Login = ({dispatch, email,isLoggedIn}) => {
             alert('Please enter your username and password');
         }
         else{
-            console.log(body);
+            
             axios.post('/loginUser',body,options)
             .then((res)=>{
                 if(res.data){
@@ -41,9 +41,6 @@ const Login = ({dispatch, email,isLoggedIn}) => {
                 }
             }).catch(console.log)
         }
-        
-        
-        
     };
 
     const updateEmail = (newEmail) => {
@@ -57,8 +54,6 @@ const Login = ({dispatch, email,isLoggedIn}) => {
         return <Redirect to='/home'/>;
     }
     
-   
-
     return (
        <div className="wallpaper">
            <div className="container">

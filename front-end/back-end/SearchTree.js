@@ -21,21 +21,16 @@ class SearchTree{
         if(parent===null){
             return;
         }
-        console.log(parent.data);
+
         arr.push(parent.data)
         // recurence on left child
         this.DFS(parent.left,arr);
-        // console.log(parent.data);
         this.DFS(parent.right,arr);
-        // console.log(parent.data);
-        return;
-
     }
 
     static BFS(arr,graph,node){
         let visited= [node];
         let queue = [node,];
-        
 
         while (queue.length!==0){
             let i = queue.shift();

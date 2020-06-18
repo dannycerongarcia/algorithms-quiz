@@ -15,7 +15,6 @@ app.get('/',(req,res)=> res.send("hello from server 2"));
 app.post('/dfsTree',(req,res)=>{
     
     if(req.body.array){
-        
         const lvl2_1LeftChild = new SearchTree(req.body.array[0])
         const lvl2_1RightChild = new SearchTree(req.body.array[2])
         const lvl1_1LeftChild = new SearchTree(req.body.array[1],lvl2_1LeftChild,lvl2_1RightChild)
@@ -27,6 +26,16 @@ app.post('/dfsTree',(req,res)=>{
         SearchTree.DFS(rootNode,rootNode.arr);
         
         if(rootNode.arr[3]===req.body.answer){
+            const bdy = {
+                'username':req.cookies.username,
+                'password':req.cookies.password,
+                'score':2
+            }
+            axios.post('htts://localhost:3001/score', bdy)
+            .then((res) => {
+                console.log(res);
+              })
+              .catch(console.log)//end of axios call
             return res.send(true);
         }
         res.send(false);

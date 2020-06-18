@@ -3,13 +3,13 @@ import { Redirect } from 'react-router-dom'
 import axios from 'axios';
 import Tree from 'react-tree-graph';
 import 'react-tree-graph/dist/style.css'
-import './CSS/DFStree.css'
+import './CSS/BFStree.css'
 const cookieParser = require('cookie-parser');
 function BFStree() {
     let [myAnswer, setAnswer] = useState('');
     let [myArray, setArray] = useState(['A', 'B', 'C', 'D', 'E', 'F']);
     let [check, setCheck] = useState(false);
-    let [visitedNode,setVisitedNode] = useState(-1)
+    let [visitedNode, setVisitedNode] = useState(-1)
 
     const loadArray = () => {
         var result = [];
@@ -17,17 +17,23 @@ function BFStree() {
         var charactersLength = characters.length;
         setVisitedNode(Math.floor(Math.random() * 7))
         for (var i = 0; i < 7; i++) {
-            result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
+            while (true) {
+                let x = characters.charAt(Math.floor(Math.random() * charactersLength));
+                // console.log(x);
+                if (!result.includes(x) === true) {
+                    result.push(x);
+                    break;
+                }
+            }
         }
         setArray(result.sort())
     }
 
     useEffect(() => {
-       loadArray()
-    
-    },[]);
-    // add empty array to render once.
+        loadArray()
 
+    }, []);
+    // add empty array to render once.
 
     let data =
     {
@@ -60,22 +66,19 @@ function BFStree() {
     // might need to set this inside server to avoid cheating
     const scoreTest = (value) => {
         let dictionary = {};
-        
-        dictionary['root']=myArray[3]
-        dictionary[myArray[3]]=[myArray[1],myArray[5],]
-        dictionary[myArray[1]]=[myArray[0],myArray[2],]
-        dictionary[myArray[5]]=[myArray[4],myArray[6],]
-        dictionary[myArray[0]]=[]
-        dictionary[myArray[2]]=[]
-        dictionary[myArray[4]]=[]
-        dictionary[myArray[6]]=[]
-        
-
+        dictionary['root'] = myArray[3]
+        dictionary[myArray[3]] = [myArray[1], myArray[5],]
+        dictionary[myArray[1]] = [myArray[0], myArray[2],]
+        dictionary[myArray[5]] = [myArray[4], myArray[6],]
+        dictionary[myArray[0]] = []
+        dictionary[myArray[2]] = []
+        dictionary[myArray[4]] = []
+        dictionary[myArray[6]] = []
         const body = {
             userinfo: document.cookie,
             answer: myAnswer,
             score: 0,
-            visited:visitedNode,
+            visited: visitedNode,
             array: dictionary,
         }
         axios.post('/bfsTree', body)
@@ -87,23 +90,23 @@ function BFStree() {
                 else { alert("sory try again") }
             }).catch(console.log)
     }
-    if(check){
-        return <Redirect to='/home'/>;
+    if (check) {
+        return <Redirect to='/home' />;
     }
     return (
         <div>
-            <title>Algorithms: DFS</title>
-            
-    <h3>binary tree, DFS.</h3>
-
-            <Tree
-                animated={true}
-                data={data}
-                height={400}
-                width={400}
-                svgProps={{ transform: 'rotate(90)' }}
-            />
-            <div>Enter the node visited on iteration #{visitedNode+1}</div>
+            <title>Algorithms: BFS</title>
+            <h3>binary tree, BFS.</h3>
+            <div className="space-from-top">
+                <Tree
+                    animated={true}
+                    data={data}
+                    height={400}
+                    width={400}
+                    svgProps={{ transform: 'rotate(90)' }}
+                />
+            </div>
+            <div>Enter the node visited on iteration #{visitedNode + 1}</div>
             <input
                 type="text"
                 placeholder="Answer"
@@ -114,6 +117,5 @@ function BFStree() {
                 onClick={scoreTest}>Submit</button>
         </div>
     );
-    
 }
 export default BFStree;

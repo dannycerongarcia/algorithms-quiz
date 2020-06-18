@@ -4,7 +4,7 @@ import axios from 'axios';
 import Tree from 'react-tree-graph';
 import 'react-tree-graph/dist/style.css'
 import './CSS/DFStree.css'
-const cookieParser = require('cookie-parser');
+
 const DFStree = () => {
     let [myAnswer, setAnswer] = useState('');
     let [myArray, setArray] = useState(['A', 'B', 'C', 'D', 'E', 'F']);
@@ -15,7 +15,19 @@ const DFStree = () => {
         var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         var charactersLength = characters.length;
         for (var i = 0; i < 6; i++) {
-            result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
+            
+            while(true){
+               
+                let x = characters.charAt(Math.floor(Math.random() * charactersLength));
+                
+                if(!result.includes(x)===true){
+                    
+                    result.push(x);
+                    break;
+                }
+                console.log("hello");
+            }
+            
         }
         setArray(result.sort())
     }
@@ -51,7 +63,7 @@ const DFStree = () => {
                 },
             ]
     };
-    // might need to set this inside server to avoid cheating
+    
     const scoreTest = (value) => {
 
         const body = {
@@ -76,16 +88,16 @@ const DFStree = () => {
     return (
         <div>
             <title>Algorithms: DFS</title>
-            
             <h3>binary tree, DFS. Enter item of 4th iteration</h3>
-
-            <Tree
-                animated={true}
-                data={data}
-                height={400}
-                width={400}
-                svgProps={{ transform: 'rotate(90)' }}
-            />
+            <div className="space-from-top">
+                <Tree
+                    animated={true}
+                    data={data}
+                    height={400}
+                    width={400}
+                    svgProps={{ transform: 'rotate(90)' }}
+                />
+            </div>
             <input
                 type="text"
                 placeholder="Answer"

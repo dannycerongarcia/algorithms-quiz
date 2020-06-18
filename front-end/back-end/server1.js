@@ -43,7 +43,6 @@ app.post('/reguisterUser', (req, res) => {
         console.log("user added to database");
         res.send(JSON.stringify(true));
     });
-
 });
 
 app.post('/loginUser', (req, res) => {
@@ -81,7 +80,6 @@ app.post('/score', (req, res) => {
 
                     if (err) console.log(err);
                 });
-
             }
         }
     });
