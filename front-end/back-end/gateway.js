@@ -48,4 +48,10 @@ app.all('/bfsTree*',(req,res)=>{
         target:server2
     });
 });
+app.all('/bSearch*',(req,res)=>{
+    apiProxy.web(req,res,{
+        target:server2
+    });
+});
+
 app.listen(port,()=> console.log(`Gateway on port ${port}!`))

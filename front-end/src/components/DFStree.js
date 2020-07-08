@@ -17,7 +17,7 @@ const DFStree = () => {
         for (var i = 0; i < 6; i++) {
             
             while(true){
-               
+
                 let x = characters.charAt(Math.floor(Math.random() * charactersLength));
                 
                 if(!result.includes(x)===true){
@@ -25,13 +25,12 @@ const DFStree = () => {
                     result.push(x);
                     break;
                 }
-                console.log("hello");
             }
             
         }
         setArray(result.sort())
     }
-
+    
     useEffect(() => {
        loadArray()
     

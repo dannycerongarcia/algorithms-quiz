@@ -8,8 +8,9 @@ app.use(express.json());
 
 // importing the dfs class
 const SearchTree = require('./SearchTree');
+const binarySearch = require('./binarySearch');
 
-
+const server1 = 'htts://localhost:3001/score';
 const port = 3002;
 app.get('/',(req,res)=> res.send("hello from server 2"));
 app.post('/dfsTree',(req,res)=>{
@@ -31,7 +32,7 @@ app.post('/dfsTree',(req,res)=>{
                 'password':req.cookies.password,
                 'score':2
             }
-            axios.post('htts://localhost:3001/score', bdy)
+            axios.post(server1, bdy)
             .then((res) => {
                 console.log(res);
               })
@@ -40,7 +41,6 @@ app.post('/dfsTree',(req,res)=>{
         }
         res.send(false);
     }
-    
 });
 
 app.post('/bfsTree',(req,res)=>{
@@ -56,18 +56,43 @@ app.post('/bfsTree',(req,res)=>{
                 'password':req.cookies.password,
                 'score':5
             }
-            axios.post('htts://localhost:3001/score', bdy)
+            axios.post(server1, bdy)
             .then((res) => {
                 console.log(res);
               })
               .catch(console.log)//end of axios call
-
             return res.send(true);
         }
-        console.log(this.arr)
-        res.send(false);
+        return res.send(false);
     }
-    
+});
+
+app.post('/bSearch',(req,res)=>{
+    this.location = 0;
+    console.log(req.body)
+    this.n=0;
+    if(true){
+        this.n = binarySearch.bSearch(this.n,req.body.array,
+                                       this.location,
+                                       req.body.key);
+        console.log(this.n)
+        console.log(req.body.answer)
+        if(this.n === Number(req.body.answer)){
+            // send score request to server 1
+            const bddy = {
+                'username':req.cookies.username,
+                'password':req.cookies.password,
+                'score':7
+            }
+            axios.post(server1,bddy)
+            .then((res)=>{
+                console.log(res);
+            })
+            .catch(console.log)
+            return res.send(true);
+        }
+        return res.send(false);
+    }
 });
 
 app.listen(port,()=> console.log(`server 2 listening on port ${port}`));
