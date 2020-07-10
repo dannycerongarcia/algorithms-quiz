@@ -60,3 +60,12 @@
   .radio-left{
     margin-left: -90%;
   }
+
+  .pretty-buttom{
+    background-color: lightseagreen;
+    border-radius: 6px;
+  }
+  .pretty-buttom:hover{
+    background-color: lightskyblue;
+    border-radius: 6px;
+  }

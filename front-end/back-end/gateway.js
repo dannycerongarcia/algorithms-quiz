@@ -54,4 +54,15 @@ app.all('/bSearch*',(req,res)=>{
     });
 });
 
+app.all('/mSort*',(req,res)=>{
+    apiProxy.web(req,res,{
+        target:server2
+    })
+})
+
+app.all('/qSort*',(req,res)=>{
+    apiProxy.web(req,res,{
+        target:server2
+    })
+})
 app.listen(port,()=> console.log(`Gateway on port ${port}!`))

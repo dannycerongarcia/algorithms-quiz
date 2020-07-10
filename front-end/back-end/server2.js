@@ -88,11 +88,14 @@ app.post('/bSearch',(req,res)=>{
             .then((res)=>{
                 console.log(res);
             })
-            .catch(console.log)
+            .catch(console.log) 
             return res.send(true);
         }
         return res.send(false);
     }
 });
+app.post('/mSort*',(req,res)=>{res.send(false)})
+app.post('/qSort*',(req,res)=>{res.send(false)})
+
 
 app.listen(port,()=> console.log(`server 2 listening on port ${port}`));
