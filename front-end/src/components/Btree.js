@@ -57,14 +57,14 @@ const Btree = () => {
         return <Redirect to="/home"/>;
     }
     return (
-        <div >
+        <div className="section-background">
             <title>Algorithms: Bimary Search</title>
         How many checks does Binary Search have to make before finding number <h4>{key}</h4>on the array
             
                 <div className=" row array-box">
                     {bArray}
                 </div>
-            <div className="row">nu
+            <div className="row">
                 <div className="col">
                     
                 </div>

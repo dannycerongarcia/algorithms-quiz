@@ -5,7 +5,8 @@
     margin-right: auto;
     margin-bottom: 3%;
     border-radius: 4px;
-    width: 520px; 
+    width: 520px;
+    background-color: white;
 }
 
 .array-item-box{

@@ -46,7 +46,7 @@
     height: 35px;
     width: 110px;
     border: solid blue;
-    margin-top: -13px;
+    margin-top: -15px;
   }
 
   .checkbox:hover{
@@ -54,18 +54,20 @@
     height: 35px;
     width: 110px;
     border: solid green;
-    margin-top: -13px;
+    margin-top: -15px;
   }
 
   .radio-left{
-    margin-left: -90%;
+    margin-left: -91%;
   }
 
-  .pretty-buttom{
-    background-color: lightseagreen;
+  .pretty-button{
+    margin-top: 20px;
+
+    background-color:lightskyblue;
     border-radius: 6px;
   }
-  .pretty-buttom:hover{
-    background-color: lightskyblue;
+  .pretty-button:hover{
+    background-color: lightgreen;
     border-radius: 6px;
   }

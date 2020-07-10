@@ -94,8 +94,119 @@ app.post('/bSearch',(req,res)=>{
         return res.send(false);
     }
 });
-app.post('/mSort*',(req,res)=>{res.send(false)})
-app.post('/qSort*',(req,res)=>{res.send(false)})
+app.post('/mSort*',(req,res)=>
+{
+    let answer1 = false;
+    let answer2 = false;
+    let answer3 = false;
+    if(req.body.qone === 2)
+    {
+        answer1 = true;
+        const bddy = {
+            'username':req.cookies.username,
+            'password':req.cookies.password,
+            'score':1
+        }
+        axios.post(server1,bddy)
+        .then((res)=>{
+            console.log(res);
+        })
+        .catch(console.log)
+    }
+    if(req.body.qtwo === 2)
+    {
+        answer2 = true;
+        const bddy = {
+            'username':req.cookies.username,
+            'password':req.cookies.password,
+            'score':1
+        }
+        axios.post(server1,bddy)
+        .then((res)=>{
+            console.log(res);
+        })
+        .catch(console.log) 
+        
+    }
+    if(req.body.qthree === 2)
+    {
+        answer3 = true;
+        const bddy = {
+            'username':req.cookies.username,
+            'password':req.cookies.password,
+            'score':1
+        }
+        axios.post(server1,bddy)
+        .then((res)=>{
+            console.log(res);
+        })
+        .catch(console.log)
+    }
+    {
+        res.send({
+            answer1:answer1,
+            answer2:answer2,
+            answer3:answer3,
+        })
+    }
+    
+})
+app.post('/qSort*',(req,res)=>
+{
+    let answer1 = false;
+    let answer2 = false;
+    let answer3 = false;
+    if(req.body.qone === 2)
+    {
+        answer1 = true;
+        const bddy = {
+            'username':req.cookies.username,
+            'password':req.cookies.password,
+            'score':1
+        }
+        axios.post(server1,bddy)
+        .then((res)=>{
+            console.log(res);
+        })
+        .catch(console.log)
+    }
+    if(req.body.qtwo === 2)
+    {
+        answer2 = true;
+        const bddy = {
+            'username':req.cookies.username,
+            'password':req.cookies.password,
+            'score':1
+        }
+        axios.post(server1,bddy)
+        .then((res)=>{
+            console.log(res);
+        })
+        .catch(console.log) 
+        
+    }
+    if(req.body.qthree === 3)
+    {
+        answer3 = true;
+        const bddy = {
+            'username':req.cookies.username,
+            'password':req.cookies.password,
+            'score':1
+        }
+        axios.post(server1,bddy)
+        .then((res)=>{
+            console.log(res);
+        })
+        .catch(console.log)
+    }
+    {
+        res.send({
+            answer1:answer1,
+            answer2:answer2,
+            answer3:answer3,
+        })
+    }   
+})
 
 
 app.listen(port,()=> console.log(`server 2 listening on port ${port}`));

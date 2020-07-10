@@ -85,9 +85,9 @@ const DFStree = () => {
         return <Redirect to='/home'/>;
     }
     return (
-        <div>
+        <div className="section-background">
             <title>Algorithms: DFS</title>
-            <h3>binary tree, DFS. Enter item of 4th iteration</h3>
+            <h3>Binary tree, DFS. Enter item of 4th iteration</h3>
             <div className="space-from-top">
                 <Tree
                     animated={true}

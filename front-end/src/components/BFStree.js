@@ -94,9 +94,9 @@ function BFStree() {
         return <Redirect to='/home' />;
     }
     return (
-        <div>
+        <div className="section-background">
             <title>Algorithms: BFS</title>
-            <h3>binary tree, BFS.</h3>
+            <h3>Binary tree, BFS.</h3>
             <div className="space-from-top">
                 <Tree
                     animated={true}

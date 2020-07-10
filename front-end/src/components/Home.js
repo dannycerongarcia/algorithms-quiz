@@ -8,7 +8,7 @@ import './CSS/Home.css'
 const Home = () => {
     
     return (
-        <div className="background">
+        <div className="section-background">
             <title>Algorithms: Home</title>
             <div className="row">
             <div className="col-2"> </div>
