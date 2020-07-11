@@ -1,0 +1,32 @@
+.board-box{
+    box-shadow: 5px 5px #b2c8df;
+    background-color: white;
+    margin-top: 4%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    padding: 1%;
+    border-radius: 2px;
+    /* border: solid black; */
+
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  thead{
+    color: white;
+    background-color: black;
+  }
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

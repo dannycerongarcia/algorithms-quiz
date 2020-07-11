@@ -28,6 +28,9 @@ const Home = () => {
                 <div className="row">
                     <div className="menu-section menu-hove"><h4 className="text-align"><Link to="Qsort">Quick Sort</Link></h4></div>
                 </div>
+                <div className="row">
+                    <div className="menu-section menu-hove"><h4 className="text-align"><Link to="/board">⋮☰  LEADERBOARD</Link></h4></div>
+                </div>
             </div>
             <div className="col-1"> </div>
             </div> 

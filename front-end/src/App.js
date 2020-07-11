@@ -20,6 +20,7 @@ import BFStree from './components/BFStree';
 import Btree from './components/Btree';
 import Msort from './components/Msort';
 import Qsort from './components/Qsort';
+import Board from './components/LeaderBoard';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/Btree" component={Btree}></Route>
         <Route path="/Msort" component={Msort}></Route>
         <Route path="/Qsort" component={Qsort}></Route>
+        <Route path="/board" component={Board}></Route>
 
 
 

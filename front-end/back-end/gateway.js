@@ -7,6 +7,7 @@ const apiProxy = httpProxy.createProxyServer();
 // servers
 const server1 = "http://localhost:3001";
 const server2 = "http://localhost:3002";
+const server3 = "http://localhost:3003";
 
 apiProxy.on('error',(err,req,res)=>{
     console.log(err);
@@ -63,6 +64,11 @@ app.all('/mSort*',(req,res)=>{
 app.all('/qSort*',(req,res)=>{
     apiProxy.web(req,res,{
         target:server2
+    })
+})
+app.all('/list*',(req,res)=>{
+    apiProxy.web(req,res,{
+        target:server3
     })
 })
 app.listen(port,()=> console.log(`Gateway on port ${port}!`))

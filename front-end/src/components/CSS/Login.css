@@ -23,6 +23,12 @@
     padding-top: 7%;
     color: white;
 }
+.login-b:hover{
+    border-radius: 5px;
+    margin-top: 5%;
+    padding: 3px 30px;
+    background-color: yellow;
+}
 .login-b{
     border-radius: 5px;
     margin-top: 5%;
