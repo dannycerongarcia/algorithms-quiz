@@ -55,7 +55,7 @@ const Reguister =()=>{
                         <input
                         
                         class="form-control"
-                        type="text"
+                        type="email"
                         placeholder="example@gmail.com"
                         
                         onChange={e => setMyEmail(myEmail=e.target.value)}
