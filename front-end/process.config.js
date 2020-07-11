@@ -1,6 +1,13 @@
 module.exports = {
     apps:[
         {
+            name:"app",
+            script:"./app.js",
+            instances:1,
+            exec_watch:true,
+            watch:true,
+        },
+        {
             name: "server1",
             script:"./back-end/server1.js",
             instances:1,
