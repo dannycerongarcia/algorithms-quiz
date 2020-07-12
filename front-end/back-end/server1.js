@@ -34,6 +34,8 @@ db.connect((err, res) => {
 app.get('/', (req, res) => res.send("welcome to server 1"));
 
 app.post('/reguisterUser', (req, res) => {
+    console.log("req to reguister");
+    console.log(req.body)
     // datebase creates using:
     // CREATE TABLE users(username VARCHAR(10), email VARCHAR(15), password VARCHAR(10) ,score INTEGER, PRIMARY KEY(username));
     let sql = "INSERT INTO users (username, email, password, score)"
@@ -46,6 +48,7 @@ app.post('/reguisterUser', (req, res) => {
 });
 
 app.post('/loginUser', (req, res) => {
+    console.log("req to login")
     let sql = "SELECT password FROM users" +
         " WHERE username = '" + req.body.username + "'";
     db.query(sql, (err, result) => {

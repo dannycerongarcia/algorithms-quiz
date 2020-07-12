@@ -1,13 +1,14 @@
 const express = require('express');
 const httpProxy = require('http-proxy');
 const app = express();
-const port = process.env.PORT || 3004;
+const port = process.env.PORT || 3000;
 
 const apiProxy = httpProxy.createProxyServer();
 // servers
 const server1 = "http://localhost:3001";
 const server2 = "http://localhost:3002";
 const server3 = "http://localhost:3003";
+const reactapp = 'http://localhost:3004';
 
 apiProxy.on('error',(err,req,res)=>{
     console.log(err);
@@ -69,6 +70,11 @@ app.all('/qSort*',(req,res)=>{
 app.all('/list*',(req,res)=>{
     apiProxy.web(req,res,{
         target:server3
+    })
+})
+app.all('*',(req,res)=>{
+    apiProxy.web(req,res,{
+        target:reactapp,
     })
 })
 app.listen(port,()=> console.log(`Gateway on port ${port}!`))

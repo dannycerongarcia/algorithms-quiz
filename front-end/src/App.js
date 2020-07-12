@@ -41,8 +41,6 @@ function App() {
         <Route path="/Qsort" component={Qsort}></Route>
         <Route path="/board" component={Board}></Route>
 
-
-
       </Switch>
     </div>
   );
