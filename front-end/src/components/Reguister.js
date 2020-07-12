@@ -86,7 +86,7 @@ const Reguister =()=>{
                         />
                         </div>
                         <div className="reguiter-button"><button
-                        onClick={submitData}>Reguister</button></div>
+                        onClick={submitData}>Register</button></div>
                     </div>
                 </div>
                 <div className="col-2"></div>
