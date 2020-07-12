@@ -1,6 +1,6 @@
 module.exports = {
     host_db:'localhost',
     user_db:'root',
-    password_db:'1LoveN@sa',
+    password_db:'',
     database_db:'algorithmsQuiz' 
 };
