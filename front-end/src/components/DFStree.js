@@ -78,7 +78,7 @@ const DFStree = () => {
                     alert("you got it right! Yay!");
                     setCheck(true);
                 }
-                else { alert("sory try again") }
+                else { alert("sorry try again") }
             }).catch(console.log)
     }
     if(check){
