@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './CSS/Login.css'
+import './CSS/footer.css'
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 // importing redux variables and function
@@ -55,6 +56,7 @@ const Login = ({dispatch, email,isLoggedIn}) => {
     }
     
     return (
+        
        <div className="wallpaper">
            <div className="container">
                <div className="row">
@@ -94,6 +96,14 @@ const Login = ({dispatch, email,isLoggedIn}) => {
                                 onClick = {verify}>
                                     Login
                                 </button>
+                                <br/> 
+                                <a href='/home'>
+                                <button 
+                                className="login-b"
+                                onClick = {console.log}
+                                >CONTINUE AS GUEST</button>
+                                </a>
+                                 
                                 <div  >
                                 <a href="/reguister">Sign-Up</a>
                                 </div>
@@ -104,6 +114,11 @@ const Login = ({dispatch, email,isLoggedIn}) => {
                 </div>
                 <div className="col-1"></div>
             </div>
+        </div>
+        <div className="login-footer">
+            {/* need a better looking footer */}
+            <div>Author: Danny Daneth Ceron Garcia.</div>
+            <div>EMAIL: <a href="dannycerongarcia@gmail.com"> dannycerongarcia@gmail.com</a></div>
         </div>
        </div>
     )

@@ -6,34 +6,39 @@ import 'react-tree-graph/dist/style.css'
 import './CSS/Home.css'
 
 const Home = () => {
-    
+
     return (
         <div className="section-background">
             <title>Algorithms: Home</title>
             <div className="row">
-            <div className="col-2"> </div>
-            <div className="col-9">
-                <div className="row">
-                    <div className="menu-section-top menu-hove-top"><h4 className="text-align"><Link to="/dfst">DFS: Depth-First Search</Link></h4></div>
+                <div className="col-2"> </div>
+                <div className="col-9">
+                    <div className="row">
+                        <div className="menu-section-top menu-hove-top"><h4 className="text-align"><Link to="/dfst">DFS: Depth-First Search</Link></h4></div>
+                    </div>
+                    <div className="row">
+                        <div className="menu-section menu-hove"><h4 className="text-align"><Link to="/bfst">BFS: Breadth-First Search</Link></h4></div>
+                    </div>
+                    <div className="row">
+                        <div className="menu-section menu-hove"><h4 className="text-align"><Link to="/Btree">Binary Search</Link></h4></div>
+                    </div>
+                    <div className="row">
+                        <div className="menu-section menu-hove"><h4 className="text-align"><Link to="Msort">Merge Sort</Link></h4></div>
+                    </div>
+                    <div className="row">
+                        <div className="menu-section menu-hove"><h4 className="text-align"><Link to="Qsort">Quick Sort</Link></h4></div>
+                    </div>
+                    <div className="row">
+                        <div className="menu-section menu-hove"><h4 className="text-align"><Link to="/board">⋮☰  LEADERBOARD</Link></h4></div>
+                    </div>
                 </div>
-                <div className="row">
-                    <div className="menu-section menu-hove"><h4 className="text-align"><Link to="/bfst">BFS: Breadth-First Search</Link></h4></div>
-                </div>
-                <div className="row">
-                    <div className="menu-section menu-hove"><h4 className="text-align"><Link to="/Btree">Binary Search</Link></h4></div>
-                </div>
-                <div className="row">
-                    <div className="menu-section menu-hove"><h4 className="text-align"><Link to="Msort">Merge Sort</Link></h4></div>
-                </div>
-                <div className="row">
-                    <div className="menu-section menu-hove"><h4 className="text-align"><Link to="Qsort">Quick Sort</Link></h4></div>
-                </div>
-                <div className="row">
-                    <div className="menu-section menu-hove"><h4 className="text-align"><Link to="/board">⋮☰  LEADERBOARD</Link></h4></div>
-                </div>
+                <div className="col-1"> </div>
             </div>
-            <div className="col-1"> </div>
-            </div> 
+            <div className="home-footer">
+                {/* need a better looking footer */}
+                <div>Author: Danny Daneth Ceron Garcia.</div>
+                <div>EMAIL: <a href="dannycerongarcia@gmail.com"> dannycerongarcia@gmail.com</a></div>
+            </div>
         </div>
     );
 
