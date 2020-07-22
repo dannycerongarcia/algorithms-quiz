@@ -20,6 +20,11 @@ table {
     color: white;
     background-color: black;
   }
+  thead:hover{
+    color: white;
+    background-color: black;
+  }
+  
   td, th {
     border: 1px solid #dddddd;
     text-align: left;
@@ -30,3 +35,10 @@ table {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+  tr:hover {
+    background-color: lightblue;
+  }
+  
+  /* tr:nth-child(even):hover {
+    background-color: lightblue;
+  } */

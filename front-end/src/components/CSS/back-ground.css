@@ -14,6 +14,6 @@
     left: 0;
     bottom: 0;
     /* enables scrolling for fixed positions*/
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }

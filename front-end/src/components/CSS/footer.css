@@ -1,14 +1,12 @@
 .login-footer{
-    position: fixed;
+position: fixed;
    left: 0;
    bottom: 0;
    width: 100%;
    background-color: white;
    color: blue;
-   padding-left: 70px;
-   text-align: left;
-   border-left:solid gray;
-   border-right:solid gray;
+   padding-left: 20px;
+   text-align: left;  
 }
 .home-footer{
     position: fixed;
@@ -19,6 +17,4 @@
    color: gold;
    padding-left: 70px;
    text-align: left;
-   border-left:solid gray;
-   border-right:solid gray;
 }
