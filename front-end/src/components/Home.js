@@ -14,22 +14,22 @@ const Home = () => {
                 <div className="col-2"> </div>
                 <div className="col-9">
                     <div className="row">
-                        <div className="menu-section-top menu-hove-top"><h4 className="text-align"><Link to="/dfst">DFS: Depth-First Search</Link></h4></div>
+                        <Link to="/dfst" className="menu-section-top menu-hove-top"><h4 className="text-align">DFS: Depth-First Search</h4></Link>
                     </div>
                     <div className="row">
-                        <div className="menu-section menu-hove"><h4 className="text-align"><Link to="/bfst">BFS: Breadth-First Search</Link></h4></div>
+                        <Link to="/bfst" className="menu-section menu-hove"><h4 className="text-align">BFS: Breadth-First Search</h4></Link>
                     </div>
                     <div className="row">
-                        <div className="menu-section menu-hove"><h4 className="text-align"><Link to="/Btree">Binary Search</Link></h4></div>
+                        <Link to="/Btree" className="menu-section menu-hove"><h4 className="text-align">Binary Search</h4></Link>
                     </div>
                     <div className="row">
-                        <div className="menu-section menu-hove"><h4 className="text-align"><Link to="Msort">Merge Sort</Link></h4></div>
+                        <Link to="Msort" className="menu-section menu-hove"><h4 className="text-align">Merge Sort</h4></Link>
                     </div>
                     <div className="row">
-                        <div className="menu-section menu-hove"><h4 className="text-align"><Link to="Qsort">Quick Sort</Link></h4></div>
+                        <Link to="Qsort" className="menu-section menu-hove"><h4 className="text-align">Quick Sort</h4></Link>
                     </div>
                     <div className="row">
-                        <div className="menu-section menu-hove"><h4 className="text-align"><Link to="/board">⋮☰  LEADERBOARD</Link></h4></div>
+                        <Link to="/board" className="menu-section menu-hove"><h4 className="text-align">⋮☰  LEADERBOARD</h4></Link>
                     </div>
                 </div>
                 <div className="col-1"> </div>
@@ -40,14 +40,15 @@ const Home = () => {
                     <div className="col-4">
                         <h6>CONTACT</h6>
                         <p>Author: Danny Daneth Ceron Garcia.</p>
-                        <p>EMAIL: <a href="dannycerongarcia@gmail.com"> dannycerongarcia@gmail.com</a></p>
+                        <p>EMAIL: <a href="mailto: dannycerongarcia@gmail.com?subject = Feedback&body = Message">dannycerongarcia@gmail.com</a></p>
                     </div>
-                    <div className="col-8">
+                    <div className="col-4">
                         <div className="row">
                             <a href="https://github.com/dannycerongarcia"><div className="light-github"></div></a>
-                            <a href="https://www.linkedin.com/in/danny-ceron-garcia-1a3553103?challengeId=AQFWhidgrZO1OAAAAXN1knuQKlD_DzHR-4047_hddn46K33CbQwNqTEyf-z_airUyJydnxzNI_rabio5wRQxhkzNz8ESRsVH7A&submissionId=bd72ed4b-c204-2416-9872-cac84400c22e"><div className="linked-in"/></a>
+                            <a href="https://www.linkedin.com/in/danny-ceron-garcia-1a3553103?challengeId=AQFWhidgrZO1OAAAAXN1knuQKlD_DzHR-4047_hddn46K33CbQwNqTEyf-z_airUyJydnxzNI_rabio5wRQxhkzNz8ESRsVH7A&submissionId=bd72ed4b-c204-2416-9872-cac84400c22e"><div className="linked-in" /></a>
                         </div>
                     </div>
+                    <col className="col-4"></col>
                 </div>
             </div>
         </div>

@@ -120,7 +120,7 @@ const Login = ({ dispatch, email, isLoggedIn }) => {
                     <div className="col-4">
                         <h6>CONTACT</h6>
                         <p>Author: Danny Daneth Ceron Garcia.</p>
-                        <p>EMAIL: <a href="dannycerongarcia@gmail.com"> dannycerongarcia@gmail.com</a></p>
+                        <p>EMAIL: <a href="mailto: dannycerongarcia@gmail.com?subject = Feedback&body = Message">dannycerongarcia@gmail.com</a></p>
                     </div>
                     <div className="col-8">
                         <div className="row">
