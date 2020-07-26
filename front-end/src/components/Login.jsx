@@ -117,12 +117,12 @@ const Login = ({ dispatch, email, isLoggedIn }) => {
             <div className="login-footer">
                 {/* need a better looking footer */}
                 <div className="row">
-                    <div className="col-4">
+                    <div className="col-lg-4 col-sm-6">
                         <h6>CONTACT</h6>
                         <p>Author: Danny Daneth Ceron Garcia.</p>
                         <p>EMAIL: <a href="mailto: dannycerongarcia@gmail.com?subject = Feedback&body = Message">dannycerongarcia@gmail.com</a></p>
                     </div>
-                    <div className="col-8">
+                    <div className="col-lg-8 col-sm-6">
                         <div className="row">
                             <a href="https://github.com/dannycerongarcia"><div className="dark-github"></div></a>
                             <a href="https://www.linkedin.com/in/danny-ceron-garcia-1a3553103?challengeId=AQFWhidgrZO1OAAAAXN1knuQKlD_DzHR-4047_hddn46K33CbQwNqTEyf-z_airUyJydnxzNI_rabio5wRQxhkzNz8ESRsVH7A&submissionId=bd72ed4b-c204-2416-9872-cac84400c22e"><div className="linked-in"/></a>
