@@ -57,7 +57,7 @@ const Btree = () => {
         return <Redirect to="/home"/>;
     }
     return (
-        <div className="section-background">
+        <div className="bs-background-scroll">
             <title>Algorithms: Bimary Search</title>
         How many checks does Binary Search have to make before finding number <h4>{key}</h4>on the array
             

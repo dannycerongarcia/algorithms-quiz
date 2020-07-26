@@ -28,3 +28,22 @@
     width: 37px;
     height: 35px;
 }
+.bs-background-scroll{
+    background-color: whitesmoke;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    background-position: center;
+    height: auto;
+    width: auto;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    /* enables scrolling for fixed positions*/
+    overflow-y: auto;
+    overflow-x: scroll;
+
+}
