@@ -41,13 +41,14 @@
 }
 .background{
     background-color: whitesmoke;
-    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -2%;
     left: 0;
     bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }

@@ -3,7 +3,8 @@
     margin-top: 3%;
     margin-left: 20%;
     margin-bottom: 200px;
-    margin-right:  20%;padding-bottom: 20px;
+    margin-right:  20%;
+    padding-bottom: 20px;
     background: rgba(0, 0, 0, 0.3);
 }
 .login{
@@ -24,7 +25,7 @@
     border-radius: 5px;
     margin-top: 5%;
     padding: 3px 30px;
-    background-color: yellow;
+    background-color: #CCCC00;
 }
 .login-b{
     width: 120px;
@@ -33,7 +34,7 @@
     padding: 3px 30px;
 }
 .sign-in-text{
-    color: #CCCC00;
+    color: gold;
     text-align: left;
     margin-left: 5%;
     padding-top: 2%;
@@ -41,17 +42,69 @@
 
 .wallpaper{
     background-image: url(../images/wallpaper.jpg);
-    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -2%;
     left: 0;
     bottom: 0;
-    overflow-y: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
+
 .white-letters{color: lightblue;text-align: center;
     text-decoration: underline overline;
+}
+
+.yellow-bar{
+    height: 100px;
+    width: 100%;
+    background-color: gold;
+}
+.about-backgroun{
+    /* height: 200px; */
+    width: 100%;
+    background-color: #F8F8FF;
+}
+.align-text-left{
+    text-align: left;
+    margin-left: ;
+}
+.underline-yellow{
+    background-color: orange;
+    height: 5px;
+    width: 100px;
+    margin-left: 2px;
+}
+
+.underline-yellow-center{
+    background-color: gold;
+    height: 5px;
+    width: 100px;
+    margin: auto;
+}
+
+.center-text{
+    text-align: center;
+}
+.white-background{
+    background-color: white;
+}
+.round-nav{
+    border-radius: 0px 0px 50px 50px;
+    margin-right: 2%;
+    margin-left: 1%;
+    top: 0;
+    position: relative;
+    /* width: 100%; */
+    /* margin-bottom: 10%; */
+}
+.nav-item{
+    border-right: solid thin gainsboro;
+}
+.nav-item:hover{
+    border-right: solid gold;
+    /* color: gold; */
 }
